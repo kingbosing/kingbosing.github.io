@@ -14,90 +14,116 @@
     <script type="text/javascript" src='js/less.min.js'></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
-<body class="container">
+<body>
 <!--<div id="first-show" class="row col-xs-12 col-md-12">-->
-    <!--<b class="first-show-count "></b>-->
-    <!--<img src="fonts/psb.jpg" alt="">-->
+<!--<b class="first-show-count ">
+</b>-->
+<!--<img src="fonts/psb.jpg" alt="">-->
 <!--</div>-->
 
 
-<header>
+<header class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-sm-4">
             <div class="header-content header-content1">
                 <img src="fonts/user_photo.jpg" alt="aa">
             </div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-sm-5">
             <div class="header-content header-content2">
                 <p class="name">我是 <b>王志博</b></p>
                 <p class="career">前端开发攻城狮</p>
                 <hr>
                 <ul>
-                    <li><b class="glyphicon glyphicon-phone"></b><span href="tel:18668101739">18668101739</span></li>
-                    <li><b class="glyphicon glyphicon-envelope"></b><a
+                    <li><b>手机</b><span href="tel:18668101739">18668101739</span></li>
+                    <li><b>邮箱</b><a
                             href="mailto:zhb_wang1@163.com">zhb_wang1@163.com</a></li>
                     <li class="qq_img">
-                        <b>QQ</b>
-                        <img src="fonts/qq.png">
+                        <b>QQ:</b><span>365611050</span>
+                        <!--<img src="fonts/qq.png">-->
                     </li>
                     <li class="weixin_img">
-                        <b>weixin</b>
-                        <img src="fonts/weixin.png" alt="">
+                        <b>weixin</b><span>kingzhibo03</span>
+                        <!--<img src="fonts/weixin.png" alt="">-->
                     </li>
 
                 </ul>
             </div>
         </div>
 
-            <div class="example">
-                <!-- defining top menu elements -->
-                <ul class="navi">
-                    <li id="n1"><a href="#"><span>前端三剑客</span></a>
-                        <!-- defining sub menu elements -->
-                        <ul class="sub">
-                            <li class="l"><a href="#"><span>html</span></a></li>
-                            <li class="c"><a href="#"><span>css</span></a></li>
-                            <li class="r"><a href="#"><span>javascript</span></a></li>
-                        </ul>
-                    </li>
-                    <li id="n2"><a href="#"><span>框框架架</span></a>
-                        <ul class="sub">
-                            <li class="l"><a href="#"><span>jquery</span></a></li>
-                            <li class="c"><a href="#"><span>Menu22</span></a></li>
-                            <li class="r"><a href="#"><span>Menu23</span></a></li>
-                        </ul>
-                    </li>
-                    <li id="n3"><a href="#"><span>Menu3</span></a>
-                        <ul class="sub">
-                            <li class="l"><a href="#"><span>Menu31</span></a></li>
-                            <li class="c"><a href="#"><span>Menu31</span></a></li>
-                            <li class="r"><a href="#"><span>Menu31</span></a></li>
-                        </ul>
-                    </li>
-                    <li id="n4"><a href="#"><span>Menu4</span></a>
-                        <ul class="sub">
-                            <li class="l"><a href="#"><span>Menu41</span></a></li>
-                            <li class="c"><a href="#"><span>Menu41</span></a></li>
-                            <li class="r"><a href="#"><span>Menu41</span></a></li>
-                        </ul>
-                    </li>
-                    <li id="n5"><a href="http://kingbosing.github.io/"><span>更多</span></a>
-                    </li>
-                </ul>
+        <div class="example">
+            <!-- defining top menu elements -->
+            <ul class="navi">
+                <li id="n1"><a href="#"><span>前端三剑客</span></a>
+                    <!-- defining sub menu elements -->
+                    <ul class="sub">
+                        <li class="l"><a href="#"><span>html</span></a></li>
+                        <li class="c"><a href="#"><span>css</span></a></li>
+                        <li class="r"><a href="#"><span>javascript</span></a></li>
+                    </ul>
+                </li>
+                <li id="n2"><a href="#"><span>框框架架</span></a>
+                    <ul class="sub">
+                        <li class="l"><a href="#"><span>jquery</span></a></li>
+                        <li class="c"><a href="#"><span>Menu22</span></a></li>
+                        <li class="r"><a href="#"><span>Menu23</span></a></li>
+                    </ul>
+                </li>
+                <li id="n3"><a href="#"><span>Menu3</span></a>
+                    <ul class="sub">
+                        <li class="l"><a href="#"><span>Menu31</span></a></li>
+                        <li class="c"><a href="#"><span>Menu31</span></a></li>
+                        <li class="r"><a href="#"><span>Menu31</span></a></li>
+                    </ul>
+                </li>
+                <li id="n4"><a href="#"><span>Menu4</span></a>
+                    <ul class="sub">
+                        <li class="l"><a href="#"><span>Menu41</span></a></li>
+                        <li class="c"><a href="#"><span>Menu41</span></a></li>
+                        <li class="r"><a href="#"><span>Menu41</span></a></li>
+                    </ul>
+                </li>
+                <li id="n5"><a href="http://kingbosing.github.io/"><span>更多详情</span></a>
+                </li>
+            </ul>
 
-                <div style="clear:both"></div>
-            </div>
+            <div style="clear:both"></div>
         </div>
-
+    </div>
 </header>
 
-<div id="nav" >
-
+<div id="nav">
+    <nav class="navbar" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="col-xs-12 col-sm-3"><a href="#aboutMe">关于我</a></li>
+                <li class="col-xs-12 col-sm-3"><a href="#education">教育背景</a></li>
+                <li class="col-xs-12 col-sm-3"><a href="#experience">工作经历</a></li>
+                <li class="col-xs-12 col-sm-3"><a href="#skills">拥有技能</a></li>
+            </ul>
+        </div>
+    </nav>
 </div>
 
+<div id="aboutMe" class="container" name="aboutMe">
+    <h1>ABOUT ME</h1>
+    <div class="aboutMe row"></div>
+</div>
 
+<div id="education" class="container" name="education">
+    <h1>education</h1>
+    <div class="education row"></div>
+</div>
 
+<div id="experience" class="container" name="experience">
+    <h1>experience</h1>
+    <div class="experience row"></div>
+</div>
+
+<div id="skills" class="container" name="skills">
+    <h1>skills</h1>
+    <div class="skills row"></div>
+</div>
 
 <script src="js/main.js"></script>
 </body>
