@@ -1,60 +1,99 @@
-#first-show{
-  margin:auto;
+#first-show {
+  margin: auto;
 
   position: absolute;
-  left: 0;right:0;
-  top:0;bottom: 0;
-
- 
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 
   background: #ff0000;
   z-index: 99;
 
 }
-header{
-  .row{
+
+header {
+  .row {
+    position: relative;
     background: #cccccc;
     //background:url("../fonts/psb.jpg")no-repeat center;
   }
-  .header-content{
-    height:350px;
+  .header-content {
+    height: 350px;
     /*background:#F00;*/
   }
-  .header-content1 img{
+  .header-content1 img {
     //height: 200px;
-    margin:auto;
+    margin: auto;
     position: absolute;
-    top: 0;left:0;right: 0;bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
-  .header-content2{
+  .header-content2 {
+    position: relative;
     padding: 10px;
     text-align: center;
-    ul{
+    .name{
+      margin:30px 0 0;
+      font-size: 30px;
+    }
+    .career{
+      font-size: 16px;
+      color:green;
+    }
+    ul {
       list-style: none;
       .qq_img{
-        width:100px;
-        height:120px;
-        margin: 0 auto;
-        img{
-          width:100%;
-
+        position: relative;
+        b{
+          display: inline-block;
+          background: #333;
+          color: #ffff00;
         }
+
+        img {
+          width: 100px;
+          height: 120px;
+          position: absolute;
+          //top:-150px;
+          left:150px;
+          display: none;
+        }
+
+      }
+      .qq_img:hover img{
+        display: block;
+      }
+      .weixin_img {
+        position: relative;
+
+        img {
+          position: absolute;
+          width: 100px;
+          height: 120px;
+          display: none;
+        }
+      }
+      .weixin_img:hover img{
+        display: block;
       }
     }
   }
 
 }
 
-#nav{
-  .row{
-    div a{
-      background: #ff0000;
-      display: block;
-      height: 100px;
-      margin:10px 0;
-    }
-  }
-}
+//#nav {
+//  .row {
+//    div a {
+//      background: #ff0000;
+//      display: block;
+//      height: 50px;
+//      margin: 10px 0;
+//    }
+//  }
+//}
 
     
 
