@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Begin</title>
-     <link rel="stylesheet/less" type="text/css" href="../css/style.less">
-    <script type="text/javascript" src='less.min.js'></script>
-    
 </head>
 <body>
 
+<div id="div"></div>
 
-<script src="js/main.js"></script>
+
+<script>
+
+    var div = document.getElementById('div');
+    for (var i = 0; i < 5; i++) {
+        var btn = document.createElement('input');
+        btn.setAttribute('type', 'button');
+        btn.setAttribute('value',i+1);
+        div.appendChild(btn)
+    }
+    div.onclick=function (e) {
+//        e.preventDefault();
+        console.log(e.target.value)
+    }
+
+</script>
 </body>
 </html>
