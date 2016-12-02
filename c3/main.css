@@ -368,14 +368,16 @@ body {
 
 .s3-wall3 {
     position: absolute;
-    bottom: -100px;
-    right: 0;
+    right: 0px;
+    top: 412px;
+    /*bottom: -100px;*/
+    /*right: 0;*/
 }
 
 .s3-man3 {
     position: absolute;
     right: 40px;
-    top: 412px;
+    top: 245px;
 }
 
 .s3-text {
@@ -435,6 +437,8 @@ body {
 
 .s4-lightOff {
     position: absolute;
+    height:60%;
+
     left: 10px;
     bottom: 0;
     z-index: 10;
