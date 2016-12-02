@@ -368,14 +368,14 @@ body {
 
 .s3-wall3 {
     position: absolute;
-    bottom: 0;
+    bottom: -100px;
     right: 0;
 }
 
 .s3-man3 {
     position: absolute;
     right: 40px;
-    top: 312px;
+    top: 412px;
 }
 
 .s3-text {
