@@ -32,8 +32,8 @@
 
     var toTop=document.getElementById('toTop');
     window.onscroll=function(){
-    
-        if(document.documentElement.scrollTop||document.body.scrollTop>1000){
+
+        if(document.documentElement.scrollTop||document.body.scrollTop>500){
             toTop.style.display='block'
         }else{
             toTop.style.display='none'
