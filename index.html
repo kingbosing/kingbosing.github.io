@@ -16,14 +16,57 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<!--<div id="first-show" class="row col-xs-12 col-md-12">-->
-<!--<b class="first-show-count ">
-</b>-->
-<!--<img src="fonts/psb.jpg" alt="">-->
-<!--</div>-->
+
+<!-- 推荐信 -->
+<div id="first-show" class="row col-xs-12 col-md-12">
+    <a class="close">
+        点击关闭  
+       <b class="first-show-count ">9</b>
+    </a>
+     
+    <img src="fonts/psb.jpg" alt="">
+</div>
+
+
+<!-- 右下置顶栏 -->
+<div class="fix">
+    <a>
+    qq
+    <img src="./images/qq.jpg">
+    </a>
+    <a>
+    weixin
+    <img src="./images/weixin.png">
+    </a>
+    <a href="#" id="toTop">To Top</a>
+</div>
 
 
 <header class="container-fluid">
+
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">boking的网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">个人简介</a></li>
+            <li><a href="#">我的作品</a></li>
+            <li><a href="#">我的收藏</a></li>
+           
+        </ul>
+    </div>
+    </div>
+    </nav>
+
     <div class="row">
         <div class="col-xs-12 col-sm-5">
             <div class="header-content header-content1">
@@ -36,67 +79,29 @@
                 <p class="career">前端开发攻城狮</p>
                 <hr>
                 <ul>
-                    <li><b>手机</b><span href="tel:18668101739">18668101739</span></li>
-                    <li><b>邮箱</b><a
-                            href="mailto:zhb_wang1@163.com">zhb_wang1@163.com</a></li>
+                    <li><b>手机</b><a href="tel:18668101739">18668101739</a></li>
+                    <li><b>邮箱</b><a href="mailto:zhb_wang1@163.com">zhb_wang1@163.com</a></li>
                     <li class="qq_img">
                         <b>企鹅号</b><span>365611059</span>
-                        <!--<img src="fonts/qq.png">-->
+                
                     </li>
                     <li class="weixin_img">
                         <b>微信</b><span>kingzhibo03</span>
-                        <!--<img src="fonts/weixin.png" alt="">-->
+                       
                     </li>
 
                 </ul>
             </div>
         </div>
 
-        <div class="example">
-            <!-- defining top menu elements -->
-            <ul class="navi">
-                <li id="n1"><a href="#"><span>前端三剑客</span></a>
-                    <!-- defining sub menu elements -->
-                    <ul class="sub">
-                        <li class="l"><a href="#"><span>html</span></a></li>
-                        <li class="c"><a href="#"><span>css</span></a></li>
-                        <li class="r"><a href="#"><span>javascript</span></a></li>
-                    </ul>
-                </li>
-                <li id="n2"><a href="#"><span>框框架架</span></a>
-                    <ul class="sub">
-                        <li class="l"><a href="#"><span>jquery</span></a></li>
-                        <li class="c"><a href="#"><span>1</span></a></li>
-                        <li class="r"><a href="#"><span>Menu23</span></a></li>
-                    </ul>
-                </li>
-                <li id="n3"><a href="#"><span>nodejs</span></a>
-                    <ul class="sub">
-                        <li class="l"><a href="#"><span>Menu31</span></a></li>
-                        <li class="c"><a href="#"><span>Menu31</span></a></li>
-                        <li class="r"><a href="#"><span>Menu31</span></a></li>
-                    </ul>
-                </li>
-                <li id="n4"><a href="#"><span>收藏</span></a>
-                    <ul class="sub">
-                        <li class="l"><a href="#"><span>Menu41</span></a></li>
-                        <li class="c"><a href="#"><span>Menu41</span></a></li>
-                        <li class="r"><a href="#"><span>Menu41</span></a></li>
-                    </ul>
-                </li>
-                <li id="n5"><a href="http://kingbosing.github.io/"><span>更多详情</span></a>
-                </li>
-            </ul>
-
-            <div style="clear:both"></div>
-        </div>
+       
     </div>
 </header>
 
 <div id="nav">
     <nav class="navbar" role="navigation">
         <div class="container-fluid">
-            <ul class="nav">
+            <ul class="row nav">
                 <li class="col-xs-12 col-sm-3"><a href="#aboutMe">关于我</a></li>
                 <li class="col-xs-12 col-sm-3"><a href="#education">教育背景</a></li>
                 <li class="col-xs-12 col-sm-3"><a href="#experience">工作经历</a></li>
@@ -109,18 +114,156 @@
 <div id="aboutMe" class="container" name="aboutMe">
     <h1>ABOUT ME</h1>
     <div class="aboutMe row">
+        <div class="col-xs-12 col-sm-3">
+            <div>
+                 <h4>来自：江西上饶</h4>
+            <p>
+                生于：1991/03 <br>
+                性别：帅哥 <br>
+                性格：俺是实诚人
+            </p>
+            </div>
+           
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div>
+                <h4>大学：上海海事大学</h4>
+                <p>
+                    时间：2011.9-2015.6 <br> 
+                    专业：轮机工程 <br>
+                    大学类别：全日制*本科*准军事化管理
+                </p>
+            </div>
+            
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div>
+                 <h4>第一份工作：金海重工</h4>
+                <p> 
+                    时间：2014.11---2016.1 <br>
+                    职位：前端开发工程师 <br>
+                    职能：负责公司内部网站前端开发和维护
+                </p>
+            </div>
+           
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div>
+                <h4>第二份工作：个人工作室</h4>
+                <p> 
+                    时间：2016.1---2016.11 <br>
+                    职位：it技术员 <br>
+                    职能：负责外包项目中的 PCweb、webAPP前端开发
+                </p>
+            </div>
+             
+        </div>
+
 
     </div>
 </div>
 
-<div id="education" class="container" name="education">
-    <h1>education</h1>
-    <div class="education row"></div>
+<div id="skills" class="container" name="skills">
+    <h1>SKILLS</h1>
+    <div class="skills row">
+        <div class="col-xs-12 col-sm-4">
+            <p>
+                <h3>前端三剑客</h3>
+                <p>
+                    毛坯：HTML <br>
+                    装修：CSS  <br>
+                    系统：JavaScript
+                </p>
+            </p>
+            
+        </div>
+        <div class="col-xs-12 col-sm-4">
+           <p>
+                <h3>框架</h3>
+               响应式：boostrop <br>
+               移动：jQueryMobile <br>
+               mvc:angular <br>
+               css样式：jQueryUI
+           </p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <p>
+                <h3></h3>
+            </p>
+        </div>
+
+        
+    </div>
 </div>
 
 <div id="experience" class="container" name="experience">
-    <h1>experience</h1>
-    <div class="experience row"></div>
+    <h1>EXPERIENCE</h1>
+    <div class="experience row">
+        <div class="col-xs-12 col-sm-2">
+           
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>   
+                    <!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="item_container">
+                                <p> 2016 . 05-2016 . 06  项目：社区管理网站</p>
+                                <p>项目描述：一个物业管理公司网站，前端网站和后台管理系统的搭建。</p>       
+                                <p>项目职责 : 负责整个后台管理系统和部分前端网页的开发。</p>
+                            </div>
+                            <!-- <img src="/wp-content/uploads/2014/07/slide1.png" alt="First slide"> -->
+                            <div class="carousel-caption">社区管理网站</div>
+                        </div>
+                        <div class="item">
+                            <div class="item_container">
+                                <p> 2016 . 05-2016 . 06  项目：社区管理网站</p>
+                                <p>项目描述：一个物业管理公司网站，前端网站和后台管理系统的搭建。</p>       
+                                <p>项目职责 : 负责整个后台管理系统和部分前端网页的开发。</p>
+                            </div>
+                            <!-- <img src="/wp-content/uploads/2014/07/slide2.png" alt="Second slide"> -->
+                            <div class="carousel-caption">标题 2</div>
+                        </div>
+                        <div class="item">
+                            <div class="item_container">
+                                <p> 2016 . 05-2016 . 06  项目：社区管理网站</p>
+                                <p>项目描述：一个物业管理公司网站，前端网站和后台管理系统的搭建。</p>       
+                                <p>项目职责 : 负责整个后台管理系统和部分前端网页的开发。</p>
+                            </div>
+                            <!-- <img src="/wp-content/uploads/2014/07/slide3.png" alt="Third slide"> -->
+                            <div class="carousel-caption">标题 3</div>
+                        </div>
+                        <div class="item">
+                            <div class="item_container">
+                                <p> 2016 . 05-2016 . 06  项目：社区管理网站</p>
+                                <p>项目描述：一个物业管理公司网站，前端网站和后台管理系统的搭建。</p>       
+                                <p>项目职责 : 负责整个后台管理系统和部分前端网页的开发。</p>
+                            </div>
+                            <!-- <img src="/wp-content/uploads/2014/07/slide3.png" alt="Third slide"> -->
+                            <div class="carousel-caption">标题 4</div>
+                        </div>
+                    </div>
+                    <!-- 轮播（Carousel）导航 -->
+                    <a class="carousel-control left" href="#myCarousel" 
+                        data-slide="prev">&lsaquo;
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" 
+                        data-slide="next">&rsaquo;
+                    </a>
+                </div>
+
+        </div>  
+        <div class="col-xs-12 col-sm-2">
+           
+        </div>
+    </div>
 </div>
 
 <div id="skills" class="container" name="skills">

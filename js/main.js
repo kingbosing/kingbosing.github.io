@@ -8,6 +8,11 @@
         var i=9;
         var count=document.querySelector('.first-show-count');
         var page=document.querySelector('#first-show');
+        var close=document.querySelector('.close');
+
+        close.onclick=function(){
+             page.style.display='none';
+        }
         var id=setInterval(function () {
             i--;
             count.innerHTML=i;
@@ -23,6 +28,19 @@
 
 
 
+  
+
+    var toTop=document.getElementById('toTop');
+    window.onscroll=function(){
+    
+        if(document.documentElement.scrollTop||document.body.scrollTop>1000){
+            toTop.style.display='block'
+        }else{
+            toTop.style.display='none'
+        }
+    }
+    
+       
 
 
 

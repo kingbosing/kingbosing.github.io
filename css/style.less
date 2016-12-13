@@ -1,18 +1,69 @@
 #first-show {
-  margin: auto;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  
+    position: absolute;
+    margin:auto;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height:99%;
+    width:99%;
+    z-index: 999;
+    background: #F00;
+}
 
-  background: #ff0000;
+.fix{
   z-index: 99;
+  position: fixed;
+  right:0;
+  bottom: 0;
+  height: 200px;
+  width: 60px;
+  #toTop{
+    display: none;
+  }
+  a{
+    margin-bottom: 10px;
+    display: block;
+    height:30px;
+    line-height: 30px;
+    text-align:center;
+    background: #333;
+    position: relative;
+    img{
+      position: absolute;
+      top: -50px;
+      left:-130px;
+      display: none;
+      width:120px;
+    }
+  }
+  a:hover{
+    background: #ff0;
+    color:#fff;
+    img{
+      display: block;
+    }
+  }
 
 }
 
 header {
+  #example-navbar-collapse{
+      li{
+        a{
+         padding-left:35px;
+         padding-right:35px;
+         font-size:16px;
+        }
+        a:hover{
+          color: #ccc;
+          background:green;
+        }
+    }   
+  }
+
   .row {
     position: relative;
     background: #cccccc;
@@ -115,8 +166,31 @@ header {
 
 #aboutMe{
   .aboutMe{
-    height: 250px;
-    background: #cccccc;
+    /*background: #cccccc;*/
+    >div:hover{
+      background:#ff0;
+      border-radius: 5px;
+      h4{background: #fff}
+    }
+    >div{
+      height:180px;
+      text-align: center;
+      border: ipx solid #ff0;
+      border-bottom: 2px solid #fff;
+      div{
+
+        box-shadow: 5px green;
+      h4{
+        background: #ff0;
+        border-radius: 10px;
+      }
+      p{
+        font-size:16px;
+      }
+      }
+      
+
+    }
   }
 }
 #education{
@@ -126,9 +200,29 @@ header {
   }
 }
 #experience{
+  overflow: hidden;
   .experience{
     height: 250px;
     background: #cccccc;
+    #myCarousel{
+      .item{
+        overflow: hidden;
+        height: 250px;
+        .item_container{
+          overflow: hidden;
+          height: 100%;
+          width:80%;
+          margin:0 auto;
+        
+          text-align: center;
+          font-size: 15px;margin-top: 15px;
+        }
+      }
+      .carousel-control{
+        line-height: 250px;
+        /*margin-top: 125px;*/
+      }
+    }
   }
 }
 #skills{
