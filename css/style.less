@@ -1,6 +1,4 @@
 #first-show {
-
-  
     position: absolute;
     margin:auto;
     top: 0;
@@ -10,8 +8,17 @@
     height:60%;
     width:60%;
     z-index: 999;
-    background: blue;
-    border:5px solid green;
+    background:green;
+    border:5px solid #ccc;
+    .close{
+      float: right;
+      color: #f00;
+    }
+    p{
+      text-align: center;
+      font-size: 18px;
+      margin-top: 30px;
+    }
 }
 
 .fix{
@@ -19,18 +26,19 @@
   position: fixed;
   right:0;
   bottom: 0;
-  height: 200px;
-  width: 60px;
+  height: 250px;
+  width: 50px;
   #toTop{
     display: none;
   }
   a{
     margin-bottom: 10px;
+    border-radius: 5px;
     display: block;
     height:30px;
     line-height: 30px;
     text-align:center;
-    background: #333;
+    background: #ccc;
     position: relative;
     img{
       position: absolute;
@@ -180,9 +188,13 @@ header {
   .aboutMe{
     /*background: #cccccc;*/
     >div:hover{
-      background:#ff0;
+      /*background:#ff0;*/
+       -webkit-box-shadow: 3px 3px 3px;
+      -moz-box-shadow: 3px 3px 3px;
+      box-shadow: 3px 3px 3px;
+      
       border-radius: 5px;
-      h4{background: #fff}
+      /*h4{background: #fff}*/
     }
     >div{
       /*height:180px;*/
@@ -223,7 +235,7 @@ header {
   overflow: hidden;
   .experience{
   
-    background: #cccccc;
+    /*background:green;*/
     #myCarousel{
       .item{
         overflow: hidden;
@@ -233,6 +245,7 @@ header {
           height: 100%;
           width:80%;
           margin:0 auto;
+          background:#ccc;
         
           text-align: center;
           font-size: 15px;margin-top: 15px;
@@ -273,8 +286,46 @@ header {
 
     
 footer{
-  height: 400px;
+  height: 150px;
   width: 100%;
   background: #ccc;
+  p{
+    font-size: 35px;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Audiowide';
+    text-decoration:none; 
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+   color:#BA01FF;
+  }
+  p:hover{
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate; 
+  }
 }
 
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF1177,
+               0 0 70px  #FF1177,
+               0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}

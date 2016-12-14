@@ -19,10 +19,9 @@
                     }
                 });
 
-    }
+    };
         
    
-
     function firstShow() {
         var i=9;
         var count=document.querySelector('.first-show-count');
@@ -43,21 +42,23 @@
         setTimeout(function () {
             page.style.display='none';
         },i*1000)
-    }
+    };
 
 
 
   
+    function toTOP(){
+        var toTop=document.getElementById('toTop');
+        window.onscroll=function(){
 
-    var toTop=document.getElementById('toTop');
-    window.onscroll=function(){
-
-        if(document.documentElement.scrollTop||document.body.scrollTop>500){
-            toTop.style.display='block'
-        }else{
-            toTop.style.display='none'
+            if(document.documentElement.scrollTop||document.body.scrollTop>500){
+                toTop.style.display='block'
+            }else{
+                toTop.style.display='none'
+            }
         }
-    }
+    };
+    
     
        
       
@@ -65,11 +66,12 @@
 
    function init() {
        firstShow();
-       swiper()
+       swiper();
+       toTOP();
        
        
    }
-    init()
+    init();
 
 
 
