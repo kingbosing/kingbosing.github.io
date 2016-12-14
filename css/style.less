@@ -185,10 +185,10 @@ header {
       h4{background: #fff}
     }
     >div{
-      height:180px;
+      /*height:180px;*/
       text-align: center;
       border: ipx solid #ff0;
-      border-bottom: 2px solid #fff;
+      border-top: 2px solid #fff;
       div{
 
         box-shadow: 5px green;
@@ -217,15 +217,17 @@ header {
     background: #cccccc;
   }
 }
+
+
 #experience{
   overflow: hidden;
   .experience{
-    height: 250px;
+  
     background: #cccccc;
     #myCarousel{
       .item{
         overflow: hidden;
-        height: 250px;
+        height: 350px;
         .item_container{
           overflow: hidden;
           height: 100%;
@@ -237,18 +239,42 @@ header {
         }
       }
       .carousel-control{
-        line-height: 250px;
+        line-height: 350px;
         /*margin-top: 125px;*/
       }
     }
   }
 }
 #myWork{
-  .myWork{
-    height: 250px;
-    background: #cccccc;
-  }
+  .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+         .swiper-slide {
+            opacity: 0.8;
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+            p{
+              text-align: center;
+              margin-top: 20px;
+              font-size: 16px;
+              color: red;
+              a{
+                color:yellow;
+              }
+            }
+            
+          }
+    }
+   
 }
 
     
+footer{
+  height: 400px;
+  width: 100%;
+  background: #ccc;
+}
 
