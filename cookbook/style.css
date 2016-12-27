@@ -1,0 +1,25 @@
+.list{
+	display: block;
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	margin:10px;
+	background: #ccc;
+	text-align: center;
+	float: left;
+}
+.list_img{
+	height: 100px;
+	display: block;
+	margin:0 auto;
+}
+.list_description{
+	font-size: 12px;
+}
+
+.classify{
+
+	list-style: none;
+	display: inline-block;
+	margin:5px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="utf-8">
+	<title>健康菜谱</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="angular.min.js"></script>
+<script src="angular-route.min.js"></script>
+
+<script src='jquery-3.1.0.js'></script>
+<body>
+
+<div ng-app='text' ng-controller="siteCtrl">
+		<ul>
+			<li class="classify" ng-repeat='x in classify'><a href="" ng-click='getMore(x.id)'>{{x.name}}</a></li>
+		</ul>
+			
+			
+			<a class="list" ng-repeat='y in list' href="menu.html?id={{y.id}}" target="_blank">
+					<img ng-src="http://tnfs.tngou.net/image{{y.img}}" class="list_img" alt="加载中。。。">
+					
+					<p class="list_name">{{y.name}}</p>
+					<p class="list_description">{{y.description}}</p>
+			</a>
+			
+</div>
+			
+
+
+
+<script type="text/javascript" src='main.js'></script>
+</body>
+</html>

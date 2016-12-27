@@ -44,9 +44,6 @@
         },i*1000)
     };
 
-
-
-  
     function toTOP(){
         var toTop=document.getElementById('toTop');
         window.onscroll=function(){
