@@ -1,0 +1,27 @@
+.footer_nav{
+	position: fixed;
+	bottom:0px;
+	width: 100%;
+}
+#joke_main{
+	
+	width:80%;
+	margin:0 auto;
+}
+.joke_h3{
+	padding-top: 20px;
+	border-top: 2px solid #f00;
+	text-align: center;
+}
+.joke_img{
+	width: 100%;
+	display: block;
+	
+	padding-bottom: 40px;: 
+}
+
+#get_more{
+	text-align: center;
+	height:100px;
+	bottom:70px;
+}

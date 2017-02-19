@@ -12,18 +12,35 @@
 <script src='jquery-3.1.0.js'></script>
 <body>
 
-<div ng-app='text' ng-controller="siteCtrl">
+<div ng-app='text' ng-controller="siteCtrl" ng-init="play='true'">
 		<ul>
 			<li class="classify" ng-repeat='x in classify'><a href="" ng-click='getMore(x.id)'>{{x.name}}</a></li>
 		</ul>
-			
-			
+		<div>
+			<input type="input" name="putOn">
+			<input type="button" name="" value="搜索" ng-click='getList(putOn.value)'>
+		</div>
+
+		<div id="classify_content">
+			<a class="list" ng-repeat='y in classify_list' href="menu.html?id={{y.id}}" target="_blank" 
+			ng-click="play=!play">
+					{{play}}
+					<img ng-src="http://tnfs.tngou.net/image{{y.img}}" class="list_img" alt="加载中。。。">
+					<p class="list_name">{{y.name}}</p>
+					<p class="list_description">{{y.description}}</p>
+
+			</a>
+		</div>
+
+		<div id="list_content" ng-show={{play}}>
 			<a class="list" ng-repeat='y in list' href="menu.html?id={{y.id}}" target="_blank">
 					<img ng-src="http://tnfs.tngou.net/image{{y.img}}" class="list_img" alt="加载中。。。">
-					
 					<p class="list_name">{{y.name}}</p>
 					<p class="list_description">{{y.description}}</p>
 			</a>
+		</div>
+				
+			
 			
 </div>
 			

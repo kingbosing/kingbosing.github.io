@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src='jquery.js'></script>
+
+<body>
+
+<script type="text/javascript">
+
+
+	$.ajax({
+    // type: "GET",
+    dataType: 'jsonp',
+    // jsonp: 'callback',
+    // jsonpCallback: 'callbackfunction',
+    url:"http://v.juhe.cn/joke/randJoke.php",
+    data: "key=3ff69896645a03336c89f96b5838a1f6",
+    timeout: 3000,
+    // contentType: "application/jsonp;utf-8",
+    success: function(data) {
+      console.log(data);
+    },
+    error:function(error_code) {
+    	console.log(error_code)
+    }
+  });
+</script>
+
+<script type="text/javascript">
+
+// $.ajax({
+// 	url:'http://v.juhe.cn/weixin/query',
+// 	dataType:'jsonp',
+// 	type:'GET',
+// 	data:'key=3ff69896645a03336c89f96b5838a1f6',
+// 	success:function(data){
+// 		console.log(data)
+// 	},
+// 	error:function(error_code) {
+// 		console.log(error_code)
+// 	}
+// })
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
