@@ -66,6 +66,15 @@
 	bottom:70px;
 }
 
+
+#jokeType b{
+	display: inline-block;
+	padding:5px;
+}
+#jokeTypePic{
+	background: green;
+}
+
 .blockSpace{
 	height:80px;
 	width: 100%;
