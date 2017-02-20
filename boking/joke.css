@@ -3,6 +3,46 @@
 	bottom:0px;
 	width: 100%;
 }
+
+#myPhoto{
+	
+	width: 100%;
+}
+#myPhoto img{
+	width: 50%;
+}
+#myName{
+	width: 50%;
+	height: 100%;
+	float: right;
+	text-align: center;
+	overflow: hidden;
+}
+.behalf{
+	width: 80%;
+	margin:0 auto;
+	overflow: hidden;
+}
+.behalf p:nth-child(1){
+	background: green;
+	font-size: 16px;
+	color: #fff;
+}
+#skills ul{
+	list-style: decimal   ;
+}
+#experience ul{
+	list-style: none;
+	margin-left: -20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
 #joke_main{
 	
 	width:80%;
@@ -24,4 +64,9 @@
 	text-align: center;
 	height:100px;
 	bottom:70px;
+}
+
+.blockSpace{
+	height:80px;
+	width: 100%;
 }

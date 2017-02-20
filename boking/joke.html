@@ -12,19 +12,113 @@
 <body>
 	<div data-role='page' id='first'>
 		<div data-role='header'>
-			<h1>王志博</h1>
+			<h3>王志博</h3>
 		</div>
 		<div data-role='main'>
+
+			<div id='myPhoto'>
+				<img src="myPhoto.jpg">
+				<div id='myName'>
+					<p>前端工程师</p>
+					<p>上海海事大学本科 <br>江西上饶/现居，杭州</p>
+					<p>18668101739 <br><a href="">zhb_wang1@163.com</a></p>
+				</div>
+			</div>
+
+			<div id='workExperience' class='behalf'>
+				<p>工作经历</p>
+				<p><h4>金海重工</h4></p>
+				<p><i>2015.03 - 2017.01</i></p>
+				<p><b>部门：</b>信息技术部</p>
+				<p><b>岗位：</b>前端工程师</p>
+				<p><b>职责：</b>根据产品原型进行前端开发，重构</p>
+
+			</div>
+
+			<div id='skills' class='behalf'>
+				<p>专业技能</p>
+				<p>
+					<ul>
+					<li>
+						熟悉H5，C3及前端性能优化，熟悉主流浏览器兼容性处理, <br>擅长响应式(Bootstrap)、移动端webAPP（jQuery Mobile)和混合（Hybrid App）开发； <br>
+					</li>
+
+					<li>
+						掌握原生JavaScript，有良好的js面向对象和模块化开发思想。熟悉Angularjs，对SPA开发有所了解； <br>
+					</li>
+					<li>
+						熟悉前端工程化开发，熟悉webpack，gulp及less、ES6预编译。有自己的代码风格和良好的注释习惯
+					</li>
+				</ul>
+				</p>
+			</div>
+
+			<div id='experience' class='behalf'>
+				<p>项目经验</p>
+				<p>
+					<ul>
+						<li>
+							<b>鹏程网</b><br>
+							<i>2015.7 - 2017.01</i>
+						</li>
+						<li>
+							<b>项目描述：</b>基于 bootstrap框架的响应式开发
+						</li>
+						<li>
+							<b>主要职责：</b><br>
+							1. 根据需求，使用bootstrap和jquery进行前端开发 <br>
+							2. 网站日常维护更新和活动页面
+						</li>
+					</ul>
+				</p>
+
+				<p>
+					<ul>
+						<li>
+							<b>社区管理网站</b><br>
+							<i>2016.9 – 2016.10</i>
+						</li>
+						<li>
+							<b>项目描述：</b>外包类型项目开发，使用jquery作为主要框架
+						</li>
+						<li>
+							<b>主要职责：</b><br>
+							1.前端任务分配，Github协作环境配置，以及代码版本管理<br>
+							2.根据业务需求，网站pc端前端开发
+						</li>
+					</ul>
+				</p>
+
+				<p>
+					<ul>
+						<li>
+							<b>数字化管理平台--移动端</b><br>
+							<i>2016.03 – 2016.10</i>
+						</li>
+						<li>
+							<b>项目描述：</b>基于jQuery Mobile开发的移动端webapp和移动端活动页面
+						</li>
+						<li>
+							<b>主要职责：</b><br>
+							1.据UI需求，进行webapp开发，使用原生js进行后台数据交互<br>
+							2.根据需求，按时完成活动场景页面（CSS3动画），电子相册等
+						</li>
+					</ul>
+				</p>
+			</div>
+
+
 
 
 			
 		</div>
 		<div data-role='footer'>
+			<div class='blockSpace'></div>
 			<div data-role="navbar" class='footer_nav'>
 				<ul>
 					<li><a href="#first" class="ui-btn-active" data-icon="home">首页</a></li>
-					<li><a href="#joke">笑话</a></li>
-					<li><a href="#anylink">搜索</a></li>
+					<li><a href="#joke" data-icon="home">笑话</a></li>
+					<li><a href="#anylink" data-icon="home">搜索</a></li>
 				</ul>
 			</div>
 		</div>	
@@ -38,15 +132,15 @@
 		<div data-role='main' >
 			<div id='joke_main'></div>
 			<div id='get_more'>
-			<p>更新一批</p>
+			<p>加载更多</p>
 			</div>
 		</div>
 		<div data-role='footer'>
 			<div data-role="navbar" class='footer_nav'>
 				<ul>
 					<li><a href="#first"  data-icon="home">首页</a></li>
-					<li><a href="#joke" class="ui-btn-active">笑话</a></li>
-					<li><a href="#anylink">搜索</a></li>
+					<li><a href="#joke" class="ui-btn-active" data-icon="home">笑话</a></li>
+					<li><a href="#anylink" data-icon="home">搜索</a></li>
 				</ul>
 			</div>
 		</div>
