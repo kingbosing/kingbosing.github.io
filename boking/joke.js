@@ -1,19 +1,12 @@
 
 $(function(){
-
-	function IsPC()  
-		{  
-           var userAgentInfo = navigator.userAgent;  
-           var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
-             
-           for (var v = 0; v < Agents.length; v++) {  
-               if (userAgentInfo.indexOf(Agents[v])<=0) { 
-               	self.location='../index.html'
-               }  
-           }  
-             
-		}            
-
+	try{
+        if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            window.location.href='../index.html'
+        }
+    }catch(e){
+    	 
+    }
 
 	/*图片笑话ajax获取*/
 	function getPhotoJoke(){
@@ -111,7 +104,7 @@ $(function(){
 
 
 		function init(){
-			IsPC();
+			// IsPC();
 			getPhotoJoke();
 			getMoreJoke();
 			jokeType();
