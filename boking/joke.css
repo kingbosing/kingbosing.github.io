@@ -40,9 +40,6 @@
 
 
 
-
-
-
 #joke_main{
 	
 	width:80%;
@@ -53,11 +50,11 @@
 	border-top: 2px solid #f00;
 	text-align: center;
 }
+
 .joke_img{
 	width: 100%;
 	display: block;
-	
-	padding-bottom: 40px;: 
+	padding-bottom: 40px;
 }
 
 #get_more{
@@ -78,4 +75,4 @@
 .blockSpace{
 	height:80px;
 	width: 100%;
-}
+};

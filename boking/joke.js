@@ -1,6 +1,20 @@
 
 $(function(){
 
+	function IsPC()  
+		{  
+           var userAgentInfo = navigator.userAgent;  
+           var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+             
+           for (var v = 0; v < Agents.length; v++) {  
+               if (userAgentInfo.indexOf(Agents[v])<=0) { 
+               	self.location='../index.html'
+               }  
+           }  
+             
+		}            
+
+
 	/*图片笑话ajax获取*/
 	function getPhotoJoke(){
 		$.ajax({
@@ -36,10 +50,13 @@ $(function(){
 			console.log(error);
 		}
 
-	});
-	}
+	})
+	};
 
-var jokeMain=document.getElementById('joke_main')
+
+	var jokeMain=document.getElementById('joke_main')
+
+
 	/*创造内容*/
 	function create_content(data){
 		
@@ -94,6 +111,7 @@ var jokeMain=document.getElementById('joke_main')
 
 
 		function init(){
+			IsPC();
 			getPhotoJoke();
 			getMoreJoke();
 			jokeType();
