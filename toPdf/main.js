@@ -8,9 +8,13 @@
 
             console.log(canvas)
             // 从 canvas 提取图片数据
-            var imgData = canvas.toDataURL('image/png',1.0);
+            // var imgData = canvas.toDataURL('image/png',1.0);
 
-            var doc = new jsPDF("p", "mm", "a4");
+
+        var image = new Image();
+        image.src = canvas.toDataURL('image/png');
+        
+          console.log(image)
             //                               |
             // |—————————————————————————————|                     
             // A0 841×1189                           
@@ -26,11 +30,11 @@
             // A10 26×37             
             //     |——|———————————————————————————|
             //                                 |——|——|
-            //                                 |     |      
-            doc.addImage(imgData, 'PNG', 0, 0,210,297);
-          
-
-            doc.save('content.pdf');
+            //  
+                                         
+            // var doc = new jsPDF("p", "mm", "a4");
+            // doc.addImage(imgData, 'PNG', 0, 0,210,297);        
+            // doc.save('content.pdf');
            
         }
     });
