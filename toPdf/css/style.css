@@ -93,6 +93,6 @@ body{
 
 .content-main{
     flex: 1;
-    background-color: #f5f5f5;
+    /*background-color: #f5f5f5;*/
     text-align: center;
 }
