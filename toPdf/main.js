@@ -1,4 +1,4 @@
-﻿document.getElementById("btn-canvas").onclick = function(){
+﻿document.getElementById("btn-Pdf").onclick = function(){
     ToPng()
     //  console.log(ToPng())
 
