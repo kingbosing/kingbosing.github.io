@@ -72,9 +72,9 @@
             var scaleBy = 2;  //缩放比例
             var canvas = document.createElement('canvas');
             canvas.width = width * scaleBy;
-            canvas.height = height * scaleBy;  //35是我处理完后发现短了一点，具体为什么不清楚,如果你也少的话，根据自己的项目调吧
+            canvas.height = height * scaleBy+60;  //35是我处理完后发现短了一点，具体为什么不清楚,如果你也少的话，根据自己的项目调吧
             canvas.style.width = width * scaleBy + 'px';
-            canvas.style.height = height * scaleBy + 'px';
+            canvas.style.height = height * scaleBy+60 + 'px';
             var context = canvas.getContext('2d');
             context.scale(scaleBy, scaleBy);
     </script>
