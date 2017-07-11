@@ -1,6 +1,12 @@
 ﻿document.getElementById("btn-html2canvas").onclick = function(){
 
-    // 将 id 为 content 的 div 渲染成 canvas
+     console.log(ToPng())
+
+}
+
+
+function ToPng(){
+      // 将 id 为 content 的 div 渲染成 canvas
    html2canvas(document.getElementById("content"), {
 
         // 渲染完成时调用，获得 canvas
@@ -39,5 +45,4 @@
            
         }
     });
-
 }
