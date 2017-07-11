@@ -13,8 +13,9 @@
 
         var image = new Image();
         image.src = canvas.toDataURL('image/png');
+        return image;
         
-          console.log(image)
+        //   console.log(image)
             //                               |
             // |—————————————————————————————|                     
             // A0 841×1189                           
