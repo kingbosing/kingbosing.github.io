@@ -44,7 +44,7 @@ function ToPng(){
             //  
                                          
             var doc = new jsPDF("p", "mm", "a4");
-            doc.addImage(imgData, 'PNG', 0, 0,220,310);        
+            doc.addImage(imgData, 'PNG', 0, 0,210,297);        
             doc.save('content.pdf');
            
         }
