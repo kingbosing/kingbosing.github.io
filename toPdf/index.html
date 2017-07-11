@@ -8,7 +8,9 @@
     <body>
         
         <div class="tools">
-            <button id="btn-html2canvas">HTML->PDF</button>
+            <button id="btn-canvas">HTML->PDF</button>
+            <button id="btn-png">Download</button>
+            
         </div>
         <!--<div style="width:200px;height:200px;background:#f00;position:absolute;top:400px;left:50%;"></div>-->
 
@@ -47,11 +49,76 @@
 
         </div>
 
+<div id="images"></div>
 
         <script src="./js/jspdf.debug.js"></script>
         <script src="./js/html2canvas.js"></script>
-        <script src="./main.js?2"></script>
+        <!--<script src="./main.js?2"></script>-->
 
+        <!--<script src="toPng/js/html2canvas.min.js"></script>-->
+
+	<!-- 将canvas图片保存成图片 -->
+	<script src="toPng/js/canvas2image.js"></script>
+	<script src="toPng/js/base64.js"></script>
+
+
+<script>
+/*生成canvas图形*/
+
+// 获取按钮id
+var btnSave = document.getElementById("btn-canvas");
+// 获取内容id
+var content = document.getElementById("content");
+// 进行canvas生成
+btnSave.onclick = function(){
+	html2canvas(content, {
+        onrendered: function(canvas) {
+        	//添加属性
+        	canvas.setAttribute('id','thecanvas');
+			//读取属性值
+			// var value= canvas.getAttribute('id');
+            document.getElementById('images').appendChild(canvas);
+        }
+	});
+}
+</script>
+<script>
+/*
+ * 说明
+ * html2canvas，目前该插件还在开发中，暂不支持带有图片的div转换。图片会被忽略
+ * 对一些的默认样式的支持可能不那么尽如人意，建议自己定义样式,
+ * 不支持iframe
+ * 不支持跨域图片
+ * 不能在浏览器插件中使用
+ * 部分浏览器上不支持SVG图片
+ * 不支持Flash
+ * 不支持古代浏览器和IE，如果你想确认是否支持某个浏览器，可以用它访问 http://deerface.sinaapp.com/ 试试
+ */
+var Download = document.getElementById("btn-png");
+Download.onclick = function(){
+	var oCanvas = document.getElementById("thecanvas");
+
+	/*自动保存为png*/
+	// 获取图片资源
+	var img_data1 = Canvas2Image.saveAsPNG(oCanvas, true).getAttribute('src');
+	saveFile(img_data1, 'abc');
+
+
+	/*下面的为原生的保存，不带格式名*/
+	// 这将会提示用户保存PNG图片
+	// Canvas2Image.saveAsPNG(oCanvas);
+}
+// 保存文件函数
+var saveFile = function(data, filename){
+    var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+    save_link.href = data;
+    save_link.download = filename;
+   
+    var event = document.createEvent('MouseEvents');
+    event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    save_link.dispatchEvent(event);
+};
+</script>
      </body>
 
 </html>
