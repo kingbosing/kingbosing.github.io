@@ -7,6 +7,19 @@
 
 
 function ToPng(){
+
+var dom=$("#content"); //你要转变的dom
+    var width = dom.width();
+    var height = dom.height();
+    var type = "png";
+    var scaleBy = 3;  //缩放比例
+    var canvas = document.createElement('canvas');
+    canvas.width = width * scaleBy;
+    canvas.height = height * scaleBy+35;  //35是我处理完后发现短了一点，具体为什么不清楚,如果你也少的话，根据自己的项目调吧
+    canvas.style.width = width * scaleBy + 'px';
+    canvas.style.height = height * scaleBy + 'px';
+    var context = canvas.getContext('2d');
+    context.scale(scaleBy, scaleBy);
       // 将 id 为 content 的 div 渲染成 canvas
    html2canvas(document.getElementById("content"), {
 
@@ -15,9 +28,10 @@ function ToPng(){
 
             console.log(canvas)
             // 从 canvas 提取图片数据
-            var imgData = canvas.toDataURL('image/png',2.0);
 
-            canvas.scale(2,2);
+            var imgData = canvas.toDataURL('image/png',1.0);
+
+            // canvas.scale(2,2);
         // var image = new Image();
         // image.src = canvas.toDataURL('image/png');
         // return image;
