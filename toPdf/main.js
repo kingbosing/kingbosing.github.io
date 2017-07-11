@@ -8,7 +8,7 @@
 
             console.log(canvas)
             // 从 canvas 提取图片数据
-            var imgData = canvas.toDataURL('image/JPEG',1.0);
+            var imgData = canvas.toDataURL('image/png',1.0);
 
             var doc = new jsPDF("p", "mm", "a4");
             //                               |
@@ -27,7 +27,7 @@
             //     |——|———————————————————————————|
             //                                 |——|——|
             //                                 |     |      
-            doc.addImage(imgData, 'JPEG', 0, 0,210,297);
+            doc.addImage(imgData, 'PNG', 0, 0,210,297);
 
             doc.save('content.pdf');
         }
