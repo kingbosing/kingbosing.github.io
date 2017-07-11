@@ -1,4 +1,4 @@
-document.getElementById("btn-html2canvas").onclick = function(){
+﻿document.getElementById("btn-html2canvas").onclick = function(){
 
     // 将 id 为 content 的 div 渲染成 canvas
    html2canvas(document.getElementById("content"), {
@@ -8,7 +8,7 @@ document.getElementById("btn-html2canvas").onclick = function(){
 
             console.log(canvas)
             // 从 canvas 提取图片数据
-            var imgData = canvas.toDataURL('image/JPEG','2.0');
+            var imgData = canvas.toDataURL('image/JPEG',1.0);
 
             var doc = new jsPDF("p", "mm", "a4");
             //                               |
