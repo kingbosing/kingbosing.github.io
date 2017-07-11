@@ -8,8 +8,8 @@ $(function(){
     	 
     }
 
-	/*图片笑话ajax获取*/
-	function getPhotoJoke(){
+	/*笑话ajax获取*/
+	function getJoke(){
 		$.ajax({
 		url:'http://v.juhe.cn/joke/randJoke.php',
 		type:'GET',
@@ -17,7 +17,7 @@ $(function(){
 		data:'key=3ff69896645a03336c89f96b5838a1f6&type=pic',
 		success: function(data){
 			var Data=data.result;
-			// console.log(Data);
+			console.log(Data);
 			create_content(Data);
 		},
 		error:function(error){
@@ -26,7 +26,9 @@ $(function(){
 
 	});
 	}
+	
 
+<<<<<<< HEAD
 	/*文字笑话ajax*/
 	function getJoke(){
 		$.ajax({
@@ -51,8 +53,12 @@ $(function(){
 
 
 	/*创造内容*/
+=======
+
+>>>>>>> parent of 5bf1eca... 1
 	function create_content(data){
-		
+		console.log(data[0])
+		var jokeMain=document.getElementById('joke_main')
 		var jokeDiv=$('<div>')
 		for(var i=0;i<data.length;i++){
 			
@@ -63,53 +69,25 @@ $(function(){
 		jokeDiv.appendTo(jokeMain)
 	}
 
- 
- 	var ifPic=true;
- 	/*加载更多*/
-	function getMoreJoke(){
-		
-			$('#get_more').click(function(){
-				if(ifPic){
-					getPhotoJoke();
-				}else{
-					getJoke();
-				}
-			})
-	};
 
-	/*文字类型和图片类型切换*/
-	function jokeType(){
-		$('#jokeType').click(function(e){
-				if(e.target.innerText=='文字类'){
-					jokeMain.innerHTML=' ';
-					getJoke();
-					ifPic=false;
-					$('#jokeTypePic').css('background','#fff');
-					$('#jokeTypeL').css('background','green');
-				}
-				
-				if(e.target.innerText=='图片类'){
-					jokeMain.innerHTML=' ';
-					getPhotoJoke();
-					ifPic=true;
-					$('#jokeTypeL').css('background','#fff');
-					$('#jokeTypePic').css('background','green');
-				}
-				
-			})
-	};
-	
+	function getMoreJoke(){
+		$('#get_more').click(function(){
+			getJoke()
+		})
+	}
 		
 
 
 
 		function init(){
+<<<<<<< HEAD
 			// IsPC();
 			getPhotoJoke();
+=======
+			getJoke();
+>>>>>>> parent of 5bf1eca... 1
 			getMoreJoke();
-			jokeType();
-			
-		};
+		}
 
 		init()
 });
