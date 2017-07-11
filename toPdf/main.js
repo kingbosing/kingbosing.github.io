@@ -1,4 +1,5 @@
 ﻿document.getElementById("btn-Pdf").onclick = function(){
+    console.log(99)
     ToPng()
     //  console.log(ToPng())
 
