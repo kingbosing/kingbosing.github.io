@@ -1,4 +1,4 @@
-﻿document.getElementById("btn-html2canvas").onclick = function(){
+﻿document.getElementById("btn-canvas").onclick = function(){
 
      console.log(ToPng())
 
