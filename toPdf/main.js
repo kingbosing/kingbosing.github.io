@@ -1,6 +1,6 @@
 ﻿document.getElementById("btn-canvas").onclick = function(){
-
-     console.log(ToPng())
+    ToPng()
+    //  console.log(ToPng())
 
 }
 
