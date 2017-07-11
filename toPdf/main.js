@@ -28,10 +28,10 @@
             //                                 |——|——|
             //                                 |     |      
             doc.addImage(imgData, 'PNG', 0, 0,210,297);
-            doc1.addImage(imgData, 'PNG', 0, 297,210,297);
+          
 
             doc.save('content.pdf');
-            doc1.save('content.pdf');
+           
         }
     });
 
