@@ -1,12 +1,12 @@
 ﻿document.getElementById("btn-Pdf").onclick = function(){
     console.log(99)
-    ToPng()
+    ToPng(king)
     //  console.log(ToPng())
 
 }
 
 
-function ToPng(){
+function ToPng(name){
 
 
       // 将 id 为 content 的 div 渲染成 canvas
@@ -45,7 +45,7 @@ function ToPng(){
                                          
             var doc = new jsPDF("p", "mm", "a4");
             doc.addImage(imgData, 'PNG', 0, 0,210,297);        
-            doc.save('content.pdf');
+            doc.save(name+'.pdf');
            
         }
     });
