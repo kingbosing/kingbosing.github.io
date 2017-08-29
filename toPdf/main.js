@@ -6,6 +6,8 @@
 }
 
 
+
+
 function getPdf(){
                 html2canvas(document.getElementById("content"), {
                     onrendered: function (canvas) {
