@@ -1,0 +1,518 @@
+﻿
+
+
+<!DOCTYPE>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简历上传</title>
+
+    <link href="bootstrap.css" rel="stylesheet">
+    <style>
+        #upLoadResume {
+            /* background: #ccc; */
+        }
+
+            #upLoadResume header {
+                height: 64px;
+                width: 100%;
+                padding: 8px 30px;
+                background: #fff;
+                box-shadow: 0 0 3px 6px rgba(204,204,204,0.15);
+            }
+
+            #upLoadResume .Inmid {
+                height: 440px;
+                width: 400px;
+                margin: 112px auto 0;
+                padding: 80px 0;
+                background: #fff;
+                box-shadow: 0 0 6px 3px rgba(204,204,204,0.15);
+            }
+
+                #upLoadResume .Inmid .content {
+                    /* margin:80px auto; */
+                    text-align: center;
+                }
+
+                    #upLoadResume .Inmid .content > b {
+                        font-size: 20px;
+                        color: #666;
+                    }
+
+                    #upLoadResume .Inmid .content > p {
+                        font-size: 16px;
+                        margin-top: 10px;
+                        color: #999;
+                    }
+
+                    #upLoadResume .Inmid .content .phone {
+                        width: 180px;
+                        height: 180px;
+                        border: 1px solid #ccc;
+                        margin: 30px auto 0;
+                    }
+
+            #upLoadResume .deletemid {
+                width: 980px;
+                height: 635px;
+                margin: 20px auto 0;
+                box-shadow: 0 0 6px 3px rgba(204,204,204,0.15);
+                overflow: hidden;
+                background: #fff;
+            }
+
+                #upLoadResume .deletemid .content {
+                    width: 250px;
+                    height: 250px;
+                    text-align: center;
+                    margin: 198px auto 0;
+                }
+
+                    #upLoadResume .deletemid .content p {
+                        font-size: 20px;
+                        margin-top: 20px;
+                        color: #333;
+                    }
+
+            #upLoadResume .button {
+                height: 44px;
+                width: 240px;
+                border-radius: 2px;
+                background: #0e7de6;
+                font-size: 14px;
+                color: #fff;
+                    border: none;
+                /* margin-top: 10px; */
+            }
+
+            #upLoadResume .loadmid {
+                width: 980px;
+                height: 635px;
+                margin: 20px auto 0;
+                box-shadow: 0 0 6px 3px rgba(204,204,204,0.15);
+                overflow: hidden;
+                background: #fff;
+            }
+
+                #upLoadResume .loadmid .content {
+                    width: 250px;
+                    height: 250px;
+                    text-align: center;
+                    margin: 220px auto 0;
+                }
+
+                    #upLoadResume .loadmid .content button {
+                        margin: 20px auto 10px;
+                    }
+
+                    #upLoadResume .loadmid .content > p {
+                        font-size: 12px;
+                        color: #bfbfbf;
+                    }
+
+
+            #upLoadResume .deleteResume .content{
+                height: 220px;
+                width: 360px;
+                background: #fff;
+                border-radius: 4px;
+                margin: 290px auto 0;
+            }
+
+                #upLoadResume .deleteResume .button-sm {
+                    height: 36px;
+                    width: 98px;
+                    border-radius: 2px;
+                    margin: 0 12px;
+                   
+                }
+
+                #upLoadResume  .button-cancel {
+                    border: 1px solid #dbdbdb;
+                    background: #fff;
+                    color: #dbdbdb;
+                      /*border: 1px solid #dbdbdb;*/
+                }
+
+                #upLoadResume  .button-confirm {
+                    background: #0e7de6;
+                    color: #fff;
+                     border: none;
+                }
+
+                #upLoadResume .deleteResume .content {
+                    padding: 24px 23px 0;
+                }
+
+                    #upLoadResume .deleteResume .content p:nth-child(1) i {
+                        float: right;
+                        height:16px;
+                        width:16px;
+                        display:block;
+                        background:url(../../images/sprite.png)-102px -311px;
+                        cursor:pointer;
+                    }
+
+                    #upLoadResume .deleteResume .content p:nth-child(2) {
+                        margin: 60px auto 0;
+                    }
+
+                    #upLoadResume .deleteResume .content p:nth-child(3) {
+                        margin-top: 40px;
+                    }
+
+        .modal-backdrop.in {
+            opacity: 0.2;
+        }
+
+         #upLoadResume .uploadResume .content{
+             height: 220px;
+                width: 360px;
+                background: #fff;
+                border-radius: 4px;
+                margin: 290px auto 0;
+                overflow:hidden;
+         }
+         #upLoadResume .uploadResume .content .input{
+             margin:60px 20px 88px;
+         }
+          #upLoadResume .uploadResume .content .button-sm{
+               height: 36px;
+               width: 98px;
+               border-radius: 2px;
+               margin: 0 12px;
+                      
+          }
+    </style>
+</head>
+<body style="background:#f2f2f2">
+    <div id='upLoadResume'>
+        <header>
+            <img src="uploadinglogo.png" alt="">
+        </header>
+
+        <!-- 登录界面 -->
+         <div class='Inmid' v-if="state==1">
+            <div class='content'>
+                <b>二维码登陆</b>
+                <p>使用小嬴 <b>APP</b>扫码登陆</p>
+                <div class='phone ' id='qrcode'></div>
+                <div id='ifSuccess'>2</div>
+            </div>
+
+        </div> 
+        <template v-else>
+
+            <!-- 删除简历界面 -->
+            <div class='deletemid' v-if="state==2">
+                <div class='content'>
+                    <img src="../../images/UploadDelete.png" alt="">
+                    <p>{{fileName}}</p>
+
+                    <button type="button" class='button'>删除</button>
+
+                </div>
+
+            </div>
+
+            <template v-else>
+                <!--上传界面  -->
+                <div class='loadmid' v-if="state==3">
+                    <div class='content'>
+                        <img src="../../images/UploadTo.png" alt="">
+
+                        <button type="button" class='button'>上传附件简历</button>
+                        <p>请上传PDF格式，文件大小在10M以内</p>
+                    </div>
+                </div>
+                <!--空  -->
+                <div v-else>
+                   
+                </div>
+            </template>
+       </template>
+
+
+        <!-- 弹窗 -->
+
+        <!--删除简历-->
+        <div class="modal fade  deleteResume" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+
+            <div class='content'>
+
+                <p>温馨提示<i class='icon icon-cha' data-dismiss='modal'></i></p>
+                <p style="text-align: center;">是否删除该附件?</p>
+
+                <p style="text-align: center;">
+                    <button class="button-sm button-cancel" data-dismiss="modal">取消</button>
+                    <button class="button-sm button-confirm">确定</button>
+
+                </p>
+            </div>
+
+        </div>
+
+        <!--上次简历-->
+        <div class="modal fade  uploadResume" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class='content'>
+               
+                    <div class="input"><input type="file" name="image_file" id="image_file"/><span style="color:red;float:left;" v-if="uploadResumeWrong">只支持PDF格式简历上传！</span></div>
+               
+
+                <p style="text-align:center">
+                    <button class="button-sm button-cancel" data-dismiss="modal">取消</button>
+                    <button class="button-sm button-confirm" type="submit" name="submit">上传</button>          
+                </p>
+                                       
+            
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="jquery-3.1.1.js"></script>
+    <script src="AjaxFileUpload.js"></script>
+
+    <script src="jquery-ui-1.114.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="jquery.qrcode.min.js"></script>
+    <script src="vue.js"></script>
+
+    <script>
+       
+
+        var app = new Vue({
+            el: '#upLoadResume',
+            data: {
+                //1--登录； 2--阅览； 3--上传
+                state:1,
+                uploadResumeWrong: false,
+                fileName: '',
+                Url: '',
+                show:false,
+               
+            }
+        })
+        
+        var k;
+        $.ajax({
+                url: "http://192.168.10.69/api/LoginV1/sendqrcode",
+                type: 'POST',
+                async:false,
+                success: function (data) {
+                    console.log('二维码：'+data)
+                    if (data.successful) {
+                        k=data.Data.QRCode;
+                    } 
+                },
+                error: function (e) { }
+
+            })
+
+       
+        var content=k;
+       
+
+        console.log(k)
+
+        $('#qrcode').qrcode({
+            width: 180,     //宽高可调
+            height: 180,
+            render: !!document.createElement('canvas').getContext ? 'canvas' : 'table', //为了支持ie8及以下
+            text: content    //当前页面url地址
+        });
+
+
+        function uuid() {
+            var s = [];
+            var hexDigits = "0123456789abcdef";
+            for (var i = 0; i < 36; i++) {
+                s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+            }
+            s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
+            s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
+            s[8] = s[13] = s[18] = s[23] = "";
+            var uuid = s.join("");
+            return uuid;
+        }
+       
+        var evtSource = new EventSource("http://192.168.10.69/api/LoginV1/login_qrcode?QRCode="+k);
+        evtSource.onmessage=function(e)
+        {
+            $("#ifSuccess").html("成功登陆,Taken:"+e.data);
+        };
+
+		
+        // var xhr = new XMLHttpRequest();
+        // setInterval(function(){
+        //     xhr.open('POST',"http://192.168.10.69/api/LoginV1/login_qrcode?QRCode="+k);
+        //     xhr.onreadystatechange = function(data){
+        //         console.log(data)
+        //         // $("#ifSuccess").html("成功登陆,Taken:"+e.Data);
+        //     };
+        //     xhr.send();
+        // },1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        sessionStorage.setItem("Token", "d1c54a2ede554900957eab90fd36b82e");
+        //var Token = 1;
+        Token = sessionStorage.getItem("Token");
+        
+        sessionStorage.clear('Token');
+        if (false) {
+            //获取附件简历
+            $.ajax({
+                url: "http://192.168.10.69:8199/api/resumeinfoV1/get_annexinfo",
+                type: 'GET',
+                data: {
+                    Token: Token
+             
+                },
+                success: function (data) {
+                    console.log(data)
+                    if (data.successful) {
+                        app.state = 2;
+                        app.fileName=data.Data.FileName;
+                        app.Url = data.Data.SaveUrl;
+                    } else {
+                        app.state = 3;
+                    }
+                    app.show = true;
+                },
+                error: function (e) { }
+
+            })
+        } else {
+            app.state = 1;
+            app.show = true;
+        }
+
+     
+        //删除模态框
+      
+        $(document).on('click', '.deletemid .content .button', function () {
+            
+            $('.deleteResume').modal()
+        })
+        // 上传模态框
+        $(document).on('click', '.loadmid .content .button', function () {
+       
+            $('.uploadResume').modal()
+
+        })
+        //删除
+        $('.deleteResume .content .button-confirm').on('click', function () {
+            $.ajax({
+                url: "http://192.168.10.69:8199/api/resumeinfoV1/set_annexresume",
+                type: 'POST',
+                data: {
+                    Token: Token,
+                    fileId: 'Uzg9'
+                },
+                success: function (data) {
+                    console.log(data)
+                    if (data.successful) {
+                        app.state = 3;
+                        $('.deleteResume .button-cancel').click();
+                    } 
+                },
+                error: function (e) { }
+
+            })
+        })
+
+        //上传
+        $('.uploadResume .content .button-confirm').on('click', function () {
+            
+            var file = document.getElementById("image_file").files[0];
+            console.log(file.type)
+            if (file.type == 'application/pdf') {
+                app.uploadResumeWrong = false;
+                $.ajaxFileUpload({
+                    url: "http://192.168.10.69:8199/api/file/upload_file?Token=" + Token,
+                    type: 'POST',
+                    secureuri: false,
+                    fileElementId: 'image_file',
+                    dataType: 'json',
+                    success: function (data, status) {
+                        console.log(data)
+                        console.log(status)
+                        if (status == 'success') {
+                           
+                            var fileName = data.FileName;
+                            var Url = data.SaveUrl;
+                            var Id = data.fileId;
+
+                          
+                            $.ajax({
+                                url: "http://192.168.10.69:8199/api/resumeinfoV1/set_annexresume",
+                                type: 'POST',
+                                data: {
+                                    Token: Token,
+                                    fileId: Id
+                                },
+                                success: function (data) {
+                                    console.log(data)
+                                    if (data.successful) {
+                                        app.fileName = fileName;
+                                        app.Url = Url;
+                                        app.state = 2;
+                                        $('.uploadResume .button-cancel').click();
+                                    }
+                                },
+                                error: function (e) { }
+
+                                
+                            })
+                        
+                           
+                           
+                        }
+
+                    },
+                    error: function (data, status, e) {
+                        console.log(e)
+
+                    }
+                });
+            } else {
+                app.uploadResumeWrong = true;
+            }
+           
+           
+         
+        })
+
+       
+    </script>
+</body>
+</html>
